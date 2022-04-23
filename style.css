@@ -1,0 +1,164 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Navbar */
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(40, 40, 40, 0.68); */
+    height: 15vh;
+    border-bottom: 2px solid white;
+}
+li{
+    list-style:none;
+    padding:0px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+}
+.border{
+    /* background-color: red; */
+    z-index: 5;
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    border-top:2px solid white;
+    display: none;
+}
+#bars{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    right:0px;
+    width:30px;
+    height:30px;
+    display: none;  
+}
+span{
+    position: absolute;
+    top:10px;
+    left:0px;
+    z-index: 3;
+    font-weight: bold;
+    color:white;
+}
+img.logo{
+    position: absolute;
+    top:0px;
+    width:50px;
+    height: 50px;
+    z-index: 5;
+    filter:invert(0%);
+}
+li#element5{
+    position: absolute;
+    right: 0px;
+}
+li:hover, li:active{
+   color:grey;
+}
+.logo1{
+    position: absolute;
+    left:-10px;
+    
+}
+
+
+/* Content */
+nav::before{
+    background: url(/images/pexels-craig-dennis-205421.jpg) no-repeat center center/cover;
+    content: "";
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    animation:change 16s infinite linear;
+
+}
+@keyframes change{
+        0%{
+            background: url(/images/pexels-craig-dennis-205421.jpg) no-repeat center center/cover;
+        }
+        20%{
+            background: url(/images/pexels-fernando-arcos-190819.jpg) no-repeat center center/cover;
+        }
+        40%{
+            background: url(/images/pexels-jess-bailey-designs-788946.jpg) no-repeat center center/cover;
+        }
+            60%{
+            background: url(/images/pexels-josh-sorenson-1334597.jpg) no-repeat center center/cover;
+        }
+        80%{
+            background: url(/images/pexels-craig-dennis-205421.jpg) no-repeat center center/cover;
+        }
+}
+
+footer{
+    position: absolute;
+    bottom: -20px;
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+span{
+    color:white;
+    position: relative;
+    top:40px;
+}
+@media (max-width:730px) {
+    #bars{
+        display:flex;
+        width: 30px;
+        height: 30px;
+        z-index:3;
+        color:white;
+    }
+    ul{
+        height: 75vh;
+        position: fixed;
+        top:0px;
+        right:0px;
+        left:0px;
+        z-index:2;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(255, 237, 237);
+        transition: top 1s ease;
+        display: none;  
+    }
+    .close{
+        display: none;
+    }
+    li{
+        padding: 10px 25px ;
+        color:black
+    }
+    li:hover{
+        color:blue;
+    }
+    .logo1{
+        filter: invert(100%);
+    }
+    li#element5{
+    position: relative;
+        right:0px;
+        left:0px;
+        top:0px;
+        bottom: 0px;
+        
+    }
+    .border{
+        top:70px;
+        display: flex;
+    }
+    
+    
+}
+
